@@ -1,7 +1,11 @@
 package ru.dmitry.spring;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MusicPlayer {
     private Music music;
+    private List<Music> musicList = new ArrayList<>();
 
     private String name;
     private int volume;
@@ -23,9 +27,9 @@ public class MusicPlayer {
     }
 
     //IoC
-    public MusicPlayer(Music music) {
-        this.music = music;
-    }
+//    public MusicPlayer(Music music) {
+//        this.music = music;
+//    }
 
     public MusicPlayer() {}
 
@@ -33,7 +37,15 @@ public class MusicPlayer {
         this.music = music;
     }
 
-    public void playMusic() {
+    public void setMusicList(List <Music> musicList) {
+        this.musicList = musicList;
+    }
+
+    public void playMusic(Music music) {
         System.out.println("Playing: " + music.getSong());
+    }
+
+    public void playMusicList() {
+        musicList.stream().forEach(music -> System.out.println(music.getSong()));
     }
 }
