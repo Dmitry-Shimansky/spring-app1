@@ -27,11 +27,11 @@ public class MusicPlayer {
     }
 
     //IoC
-//    public MusicPlayer(Music music) {
-//        this.music = music;
-//    }
+    public MusicPlayer(Music music) {
+        this.music = music;
+    }
 
-    public MusicPlayer() {}
+//    public MusicPlayer() {}
 
     public void setMusic(Music music) {
         this.music = music;

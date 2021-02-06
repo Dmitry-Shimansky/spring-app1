@@ -7,17 +7,23 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <context:component-scan base-package="ru.dmitry.spring"/>
 
-    <bean id="musicBeanElectro"
-          class="ru.dmitry.spring.ElectronicMusic">
+   <!-- <bean id="musicBeanElectro"
+          class="ru.dmitry.spring.ElectronicMusic"
+        init-method="doMyInit"
+        destroy-method="doMyDestroy"
+    factory-method="getElectroMusic">
     </bean>
 
     <bean id="musicBeanClassic"
-          class="ru.dmitry.spring.ClassicalMusic">
-    </bean>
+          class="ru.dmitry.spring.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+    factory-method="getClassicalMusic">
+    </bean>-->
 
-    <bean id="musicBeanPock"
+   <!-- <bean id="musicBeanPock"
           class="ru.dmitry.spring.RockMusic">
     </bean>
 
@@ -34,6 +40,6 @@
 
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    </bean>-->
 
 </beans>
