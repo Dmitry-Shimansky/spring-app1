@@ -1,5 +1,8 @@
 package ru.dmitry.spring;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ElectronicMusic implements Music {
     private ElectronicMusic() {
     }
