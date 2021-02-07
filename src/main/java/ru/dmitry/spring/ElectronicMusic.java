@@ -2,25 +2,18 @@ package ru.dmitry.spring;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class ElectronicMusic implements Music {
-    private ElectronicMusic() {
-    }
-
-    public static ElectronicMusic getElectroMusic() {
-        return new ElectronicMusic();
-    }
-
-    private void doMyInit() {
-        System.out.println("Doing my initialization");
-    }
-
-    private void doMyDestroy() {
-        System.out.println("Doing my destruction");
-    }
+    List<String> listElectronicMusic = new ArrayList<>();
 
     @Override
-    public String getSong() {
-        return "Axwell & Sebastien Ingrosso";
+    public List <String> getSong() {
+        listElectronicMusic.add("Axwell & Sebastien Ingrosso");
+        listElectronicMusic.add("Alex Guadino");
+        listElectronicMusic.add("Armin Van Buren");
+        return listElectronicMusic;
     }
 }

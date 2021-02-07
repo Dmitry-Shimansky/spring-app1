@@ -2,19 +2,19 @@ package ru.dmitry.spring;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
 
 public class ClassicalMusic implements Music {
-
-    private void doMyInit() {
-        System.out.println("Doing my initialization");
-    }
-
-    private void doMyDestroy() {
-        System.out.println("Doing my destruction");
-    }
+    List<String> listClassicalMusic = new ArrayList<>();
 
     @Override
-    public String getSong() {
-        return "Hungarian Rhapsody";
+    public List<String> getSong() {
+        listClassicalMusic.add("Hungarian Rhapsody");
+        listClassicalMusic.add("Alex Petrov Ahmatov");
+        listClassicalMusic.add("Sting Petrovich Azerman");
+        return listClassicalMusic;
     }
 }
