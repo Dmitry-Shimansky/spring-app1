@@ -4,14 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Random;
 
 @Component
 public class MusicPlayer {
     private Music music1;
     private Music music2;
-    private MusicStyle style;
 
     @Autowired
     public MusicPlayer(@Qualifier("classicalMusic") Music music1,
@@ -21,10 +19,11 @@ public class MusicPlayer {
     }
 
     public String playMusic(MusicStyle style) {
-        if (style == MusicStyle.CLASSICAL) {
-            return "Playing: " + music1.getSong().indexOf(1);
-        } else if (style == MusicStyle.ELECTONIC) {
-            return "Playing: " + music2.getSong().indexOf(1);
+        switch(style){
+            case CLASSICAL:
+                return "Playing: " + music1.getSong().get(new Random().nextInt(3));
+            default:
+                return "Playing: " + music2.getSong().get(new Random().nextInt(3));
         }
     }
 }

@@ -10,7 +10,7 @@ public class ElectronicMusic implements Music {
     List<String> listElectronicMusic = new ArrayList<>();
 
     @Override
-    public List <String> getSong() {
+    public List<String> getSong() {
         listElectronicMusic.add("Axwell & Sebastien Ingrosso");
         listElectronicMusic.add("Alex Guadino");
         listElectronicMusic.add("Armin Van Buren");

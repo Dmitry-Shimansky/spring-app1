@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-
+@Component
 public class ClassicalMusic implements Music {
     List<String> listClassicalMusic = new ArrayList<>();
 
