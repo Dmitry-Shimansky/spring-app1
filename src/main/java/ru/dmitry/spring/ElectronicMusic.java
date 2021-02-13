@@ -7,7 +7,6 @@ import java.util.List;
 
 
 public class ElectronicMusic implements Music {
-
     @Override
     public String getSong() {
         return "Axwell & Sebastien Ingrosso";

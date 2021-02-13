@@ -1,9 +1,7 @@
 package ru.dmitry.spring;
 
 import org.springframework.stereotype.Component;
-
 import java.util.List;
-
 
 public class RockMusic implements Music {
     @Override

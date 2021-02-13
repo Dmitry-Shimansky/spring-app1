@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class ClassicalMusic implements Music {
-
     @Override
     public String getSong() {
         return "Hungarian Rhapsody";
